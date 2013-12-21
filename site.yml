@@ -1,0 +1,17 @@
+---
+# This playbook deploy all the app here 
+
+- name: apply basic configuration for all nodes
+  host: all
+  user: root
+
+  roles:
+    - common
+
+
+- name: configure and deploy the webservers and application
+  hosts: web
+  user: root
+
+  roles:
+    - web

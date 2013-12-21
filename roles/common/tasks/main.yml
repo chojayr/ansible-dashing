@@ -1,0 +1,30 @@
+---
+# These task install application
+
+- name: upgrade packages
+  apt: upgrade=yes update_cache=yes
+  sudo: True
+
+- name: install ruby and git etc.
+  apt: pkg=$item state=present
+  sudo: True
+  with_items:
+    - gcc
+    - gcc-c++
+    - zlib
+    - zlib-devel
+    - make
+    - git
+    - curl
+    - ruby1.9.1-dev
+    - rubygems
+    - libyaml-ruby
+    - nodejs
+
+- name: install gems needed
+  gem: name=$item state=present 
+  with_items:
+    - rake
+    - bundler
+    - dashing
+    
