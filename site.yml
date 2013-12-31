@@ -8,9 +8,8 @@
   roles:
     - common
 
-
 - name: configure and deploy the webservers and application
-  hosts: web
+  hosts: dashing-server
   user: root
 
   roles:

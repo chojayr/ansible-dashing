@@ -1,0 +1,3 @@
+---
+- name: run bundle install
+  command: cd /opt/dashboard && /usr/local/bin/bundle install
