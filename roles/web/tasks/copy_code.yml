@@ -1,9 +1,0 @@
----
-# Task responsible for copying latest code forn version control system
-
-- name: Copy the code from repo
-  git: repo={{ repository }} dest=/opt/
-
-
-- name: Add required gems on Gemfile 
-  template: src=Gemfile.j2 dest=/opt/dashboard/Gemfile
