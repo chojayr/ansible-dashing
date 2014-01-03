@@ -2,15 +2,16 @@
 # This playbook deploy all the app here 
 
 - name: apply basic configuration for all nodes
-  host: all
+  hosts: dashing-servers
   user: root
 
   roles:
     - common
-
-- name: configure and deploy the webservers and application
-  hosts: dashing-server
-  user: root
-
-  roles:
     - web
+
+#- name: configure and deploy the webservers and application
+#  hosts: dashing-server
+#  user: root
+
+#  roles:
+#    - web

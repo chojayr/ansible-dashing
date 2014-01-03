@@ -2,8 +2,12 @@
 # Task responsible for copying latest code forn version control system
 
 - name: Copy the code from repo
-  git: repo={{ repository }} dest=/opt/
+  git: repo={{ repository }} dest=/opt/dash
 
 
 - name: Add required gems on Gemfile 
-  template: src=Gemfile.j2 dest=/opt/dashboard/Gemfile
+  template: src=Gemfile.j2 dest=/opt/dash/Gemfile
+
+- name: Apply bundle install  
+  action: "shell cd /opt/dash && ~/.gem/ruby/1.8/bin/bundle install"
+

@@ -1,8 +1,8 @@
 ---
 # These task install application
 
-- name: upgrade packages
-  apt: upgrade=yes update_cache=yes
+- name: update packages
+  apt: upgrade=safe update_cache=yes
   sudo: True
 
 - name: install ruby and git etc.
@@ -10,15 +10,10 @@
   sudo: True
   with_items:
     - gcc
-    - gcc-c++
-    - zlib
-    - zlib-devel
     - make
     - git
-    - curl
-    - ruby1.9.1-dev
+    - ruby
     - rubygems
-    - libyaml-ruby
     - nodejs
 
 - name: install gems needed
