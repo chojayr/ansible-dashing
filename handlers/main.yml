@@ -1,0 +1,6 @@
+---
+
+- name: stop dashing service
+  command: cd {{user_home}}/{{dashboard_name}} && dashing stop
+
+

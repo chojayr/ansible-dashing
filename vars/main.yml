@@ -1,0 +1,19 @@
+---
+# project name 
+dashboard_name: dashboard
+
+# username & password
+user: dash
+
+# python -c 'import crypt; print crypt.crypt("pass30rd", "$1$SomeSalt$")'
+password: $1$SomeSalt$iMmy.lhduzdmGs03ZZK8F.
+
+# home
+user_home: "/home/dash"
+
+# rvm bin 
+rvm_bin: ".rvm/bin"
+
+# rvm bin 
+ruby_version: "ruby-1.9.3-p484"
+

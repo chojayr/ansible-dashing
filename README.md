@@ -1,3 +1,9 @@
-** Just palying with Ansible
+** To Install Dashing (Beautiful Dashboard) using Ansible
 
-This sample will use for fresh spawned VM that will install required application and deploy the app from the repository
+Works on Ubuntu 12.04
+Install Following gems & dependencies
+
+Status: still working in progress
+
+To be committed on ansible galaxy
+

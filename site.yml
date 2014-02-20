@@ -1,17 +1,12 @@
 ---
-# This playbook deploy all the app here 
+- hosts: install dashing  
+  hosts: dashing-instance
+  user: dash
+  vars_files:
+    - vars/main.yml
+  tasks:
+    - include: tasks/main.yml
+  handlers:
+    - include: handlers/main.yml
+ 
 
-- name: apply basic configuration for all nodes
-  hosts: dashing-servers
-  user: root
-
-  roles:
-    - common
-    - web
-
-#- name: configure and deploy the webservers and application
-#  hosts: dashing-server
-#  user: root
-
-#  roles:
-#    - web

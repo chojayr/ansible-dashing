@@ -1,0 +1,4 @@
+---
+# Task file for dashing
+- include: common.yml
+- include: dashing.yml

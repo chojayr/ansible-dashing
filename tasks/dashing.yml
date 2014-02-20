@@ -1,0 +1,22 @@
+---
+
+# Fetch an existing dashboard project or create an new one 
+# Check existing dashboard project here https://github.com/Shopify/dashing/wiki/Additional-Widgets
+
+# Task create sample dashboard project 
+- name: Create sample dashboard
+  command: cd {{user_home}} && dashing new {{dashboard_name}}
+
+- name: bundle install
+  command: cd {{user_home}}/{{dashboard_name}} && bundle install
+
+- name: start dashing service
+  command: cd {{user_home}}/{{dashboard_name}} && dashing start -d
+
+
+
+
+
+
+
+
