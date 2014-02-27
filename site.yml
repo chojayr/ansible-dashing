@@ -1,7 +1,7 @@
 ---
-- hosts: install dashing  
-  hosts: dashing-instance
-  user: dash
+- name: install dashing  
+  hosts: dashing
+  remote_user: root
   vars_files:
     - vars/main.yml
   tasks:

@@ -3,17 +3,21 @@
 dashboard_name: dashboard
 
 # username & password
-user: dash
+user: vagrant
+group: vagrant
 
 # python -c 'import crypt; print crypt.crypt("pass30rd", "$1$SomeSalt$")'
 password: $1$SomeSalt$iMmy.lhduzdmGs03ZZK8F.
 
 # home
-user_home: "/home/dash"
+user_home: "/home/vagrant"
 
-# rvm bin 
-rvm_bin: ".rvm/bin"
+# rbenv
+rbenv_root: /usr/local/rbenv
 
-# rvm bin 
-ruby_version: "ruby-1.9.3-p484"
+# rbenv user 
+rbenv_user: "/home/vagrant/rbenv"
+
+# ruby version 
+ruby_version: 1.9.3-p484
 

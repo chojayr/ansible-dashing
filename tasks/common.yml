@@ -23,18 +23,4 @@
     - libyaml-dev
     - build-essential
 
-- name: install rvm
-  shell: "cd {{user_home}} && \\curl -sSL https://get.rvm.io | bash"
 
-
-- name: rbenv repo 
-  git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }} version=v0.4.0
-
-- name: install rbenv
-  shell: "curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash"
-
-
-- name: install gems needed
-  shell: "cd {{user_home}}/.rbenv/bin/rbenv install 1.9.3-p484"
-
-    
