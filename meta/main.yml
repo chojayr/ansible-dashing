@@ -1,7 +1,7 @@
 ---
 galaxy_info:
-  author: Mayeu
-  description: An open source monitoring framework.
+  author: chojayr
+  description: Dashing (a handsome dashboard)
   license: license BSD
   min_ansible_version: 1.4
   #
@@ -76,14 +76,11 @@ galaxy_info:
   #  versions:
   #  - all
   #  - any
-  - name: Debian
+  - name: Ubuntu
     versions:
   #  - all
-  #  - etch
-  #  - lenny
-  #  - squeeze
-    - wheezy
-    - jessie
+    - precise
+    - lucid
   #
   # Below are all categories currently available. Just as with
   # the platforms above, uncomment those that apply to your role.

@@ -1,0 +1,25 @@
+---
+
+# Fetch an existing dashboard project or create an new one 
+# Check existing dashboard project here https://github.com/Shopify/dashing/wiki/Additional-Widgets
+
+# Task create sample dashboard project 
+- name: Create sample dashboard
+  shell: cd /opt && {{ gem_bin }}/dashing new {{ dashboard_name }}
+
+- name: bundle install
+  shell: cd /opt/{{ dashboard_name }} && {{ gem_bin }}/bundle install
+
+- name: remove thread_safe version 0.2.0
+  gem: name=thread_safe version=0.2.0 executable={{ rbenv_root }}/versions/{{ ruby_version }}/bin/gem state=absent
+
+- name: start dashing service
+  shell: cd /opt/{{ dashboard_name }} && {{ gem_bin }}/rackup -p 3030 -s webrick -D
+
+
+
+
+
+
+
+
