@@ -1,4 +1,0 @@
----
-- name: do a bundle install to add other gem dependencies
-  command: cd /opt/dashboard && /usr/local/bin/bundle install
-  
