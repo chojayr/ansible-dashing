@@ -3,11 +3,9 @@
 
 - name: update packages
   apt: update_cache=yes
-  sudo: True
 
 - name: install git, curl, make, nodejs etc.
   apt: pkg={{item}} state=present
-  sudo: True
   with_items:
     - gcc
     - g++
